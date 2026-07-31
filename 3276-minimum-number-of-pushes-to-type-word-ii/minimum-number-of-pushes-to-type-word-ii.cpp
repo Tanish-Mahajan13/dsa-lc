@@ -8,18 +8,8 @@ public:
         sort(arr.rbegin(),arr.rend());
         int ans=0;
         for(int i=0; i<26 ;i++){
-            if(i<8){
-                ans+=arr[i];
-            }
-            else if(i<16){
-                ans+=arr[i]*2;
-            }
-            else if(i<24){
-                ans+=arr[i]*3;
-            }
-            else{
-                ans+=arr[i]*4;
-            }
+            int temp = (i/8)+1;
+            ans+=arr[i]*temp;
         }
         return ans;
     }
